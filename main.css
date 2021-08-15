@@ -1,0 +1,244 @@
+body{
+    margin: 0;
+    overflow: none;
+    font-family: 'Anurati-Regular';
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(white, grey, black);
+}
+
+.circle div{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(black, grey, white);
+    border: 2px solid snow;
+}
+
+.circle div:nth-child(1){
+    top: 30%;
+    left: 77%;
+    animation: animate 10s linear infinite;
+}
+
+.circle div:nth-child(2){
+    top: 50%;
+    left: 69%;
+    animation: animate 8s linear infinite;
+}
+
+.circle div:nth-child(3){
+    top: 14%;
+    left: 4%;
+    animation: animate 7s linear infinite;
+}
+
+.circle div:nth-child(4){
+    top: 19%;
+    left: 16%;
+    animation: animate 9s linear infinite;
+}
+
+.circle div:nth-child(5){
+    top: 90%;
+    left: 18%;
+    animation: animate 6s linear infinite;
+}
+
+.circle div:nth-child(6){
+    top: 89%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+
+.circle div:nth-child(7){
+    top: 62%;
+    left: 80%;
+    animation: animate 14s linear infinite;
+}
+
+.circle div:nth-child(8){
+    top: 37%;
+    left: 11%;
+    animation: animate 11s linear infinite;
+}
+
+.circle div:nth-child(9){
+    top: 70%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.circle div:nth-child(10){
+    top: 22%;
+    left: 90%;
+    animation: animate 5s linear infinite;
+}
+
+.circle div:nth-child(11){
+    top: 50%;
+    left: 26%;
+    animation: animate 3s linear infinite;
+}
+
+.circle div:nth-child(12){
+    top: 10%;
+    left: 66%;
+    animation: animate 4s linear infinite;
+}
+
+.circle div:nth-child(13){
+    top: 80%;
+    left: 44%;
+    animation: animate 7s linear infinite;
+}
+
+.circle div:nth-child(14){
+    top: 17%;
+    left: 30%;
+    animation: animate 9s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.4) translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+button{
+    font-family: 'Blanka-Regular';
+}
+
+h1{
+    font-family: 'Blanka-Regular';
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.selector{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 140px;
+    height: 140px;
+    margin-top: -70px;
+    margin-left: -70px;
+}
+
+.selector button{
+    position: relative;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    top: -50%;
+    padding: 10px;
+    background: black;
+    color: snow;
+    border-radius: 50%;
+    border-color: whitesmoke;
+    font-size: 40px;
+    cursor: pointer;
+    box-shadow: darkgray;
+    transition: all .1s;
+}
+
+.selector button:hover{
+    background: none;
+}
+
+.selector button:focus{
+    outline: none;
+}
+
+.selector ul{
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: -80px;
+    bottom: -80px;
+    right: -80px;
+    left: -80px;
+}
+
+.selector li{
+    position: absolute;
+    width: 0;
+    height: 100%;
+    margin: 0 50%;
+    transform: rotate(-360deg);
+    transition: all 0.8s ease-in-out;
+}
+
+.selector li input{
+    display: none;
+}
+
+.selector li input + label{
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    line-height: 1px;
+    margin-left: 0;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: darkgray;
+    transition: all 0.8s ease-in-out;
+}
+
+.selector li input:checked + label{
+    background: black;
+    color: white;
+}
+
+.selector.open li input + label{
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    margin-left: -50px;
+    box-shadow: whitesmoke;
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: 'Anurati-Regular';
+      src: url('fonts/Anurati-Regular.eot'); /* IE9 Compat Modes */
+      src: url('fonts/Anurati-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('fonts/Anurati-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+          url('fonts/Anurati-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+          url('fonts/Anurati-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+          url('fonts/Anurati-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+      font-weight: 700;
+      font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Blanka-Regular';
+      src: url('fonts/Blanka-Regular.eot'); /* IE9 Compat Modes */
+      src: url('fonts/Blanka-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('fonts/Blanka-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+          url('fonts/Blanka-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+          url('fonts/Blanka-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+          url('fonts/Blanka-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+      font-weight: 700;
+      font-style: normal;
+  }
